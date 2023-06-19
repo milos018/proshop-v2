@@ -1,0 +1,15 @@
+version: '3.7'
+services:
+
+  mongo-proshop:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: proshop
+      MONGO_INITDB_ROOT_PASSWORD: proshop
+
+volumes:
+  mongo_data:
